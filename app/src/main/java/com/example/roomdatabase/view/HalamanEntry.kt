@@ -1,5 +1,8 @@
 package com.example.roomdatabase.view
 
+import DetailSiswa
+import EntryViewModel
+import UIStateSiswa
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -26,11 +29,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.roomdatabase.R
 import com.example.roomdatabase.view.Route.DestinasiEntry
-import com.example.roomdatabase.view.route.DestinasiEntry
-import com.example.roomdatabase.viewmodel.DetailSiswa
-import com.example.roomdatabase.viewmodel.EntryViewModel
-import com.example.roomdatabase.viewmodel.UIStateSiswa
-import com.example.roomdatabase.viewmodel.provider.PenyediaViewModel
+import com.example.roomdatabase.viewmodel.Profider.PenyediaViewModel
 
 import kotlinx.coroutines.launch
 

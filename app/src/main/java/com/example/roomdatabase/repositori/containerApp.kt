@@ -8,7 +8,7 @@ interface ContainerApp{
     val repositoriSiswa : RepositoriSiswa
 }
 
-class ContainerDataApp( val context: Context):
+class ContainerDataApp(private val context: Context):
     ContainerApp {
     override val repositoriSiswa: RepositoriSiswa by lazy {
         OfflineRepositoriSiswa(
@@ -16,11 +16,14 @@ class ContainerDataApp( val context: Context):
     }
 }
 
-class AplikasiSiswa : Application(){
-    lateinit var containerApp: ContainerApp
+class AplikasiSiswa : Application() {
+    /**
+     * AppContainer instance digunakan oleh kelas-kelas lainnya untuk mendapatkan dependensi
+     */
+    lateinit var container: ContainerApp
 
     override fun onCreate() {
         super.onCreate()
-        containerApp = ContainerDataApp(this)
+        container = ContainerDataApp(this)
     }
 }

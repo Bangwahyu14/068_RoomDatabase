@@ -32,13 +32,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.roomdatabase.room.Siswa
-import com.example.roomdatabase.view.route.DestinasiHome
 import com.example.roomdatabase.viewmodel.HomeViewModel
-import com.example.roomdatabase.viewmodel.provider.PenyediaViewModel
 import com.example.roomdatabase.R
 import com.example.roomdatabase.Room.Siswa
 import com.example.roomdatabase.view.Route.DestinasiHome
+import com.example.roomdatabase.viewmodel.Profider.PenyediaViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
