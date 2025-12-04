@@ -10,10 +10,12 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.example.roomdatabase.view.DetailSiswaScreen
+import com.example.roomdatabase.view.EditSiswaScreen
 import com.example.roomdatabase.view.EntrySiswaScreen
 import com.example.roomdatabase.view.HomeScreen
 import com.example.roomdatabase.view.Route.DestinasiDetailSiswa
-import com.example.roomdatabase.view.Route.DestinasiDetailSiswa.itemIdArg
+import com.example.roomdatabase.view.Route.DestinasiEditSiswa
+import com.example.roomdatabase.view.Route.DestinasiEditSiswa.itemIdArg
 import com.example.roomdatabase.view.Route.DestinasiEntry
 import com.example.roomdatabase.view.Route.DestinasiHome
 
@@ -48,13 +50,13 @@ fun HostNavigasi(
             type = NavType.IntType})
         ){
             DetailSiswaScreen(
-                //navigateToEditItem = {navController.navigate("${DestinasiEditsiswa.route}/$it")},
+                navigateToEditItem = {navController.navigate("${DestinasiEditSiswa.route}/$it")},
                 navigateBack = {navController.navigateUp()})
         }
-        composable(route=DestinasiEditSiswa.routeWithArgs,
-            arguments= listOf(navArgument(DestinasiEditSiswa.itemIdArgh){
+        composable(route= DestinasiEditSiswa.routeWithArgs,
+            arguments= listOf(navArgument(DestinasiEditSiswa.itemIdArg){
                 type= NavType.IntType })) {
-            editSiswaScreen(
+            EditSiswaScreen(
                 navigateBack = {navController.popBackStack()},
                 onNavigateUp = {navController.navigateUp()}
             )

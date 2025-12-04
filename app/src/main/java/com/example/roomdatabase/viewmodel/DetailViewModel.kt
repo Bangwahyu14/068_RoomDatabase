@@ -21,7 +21,7 @@ class DetailViewModel (
     private val idSiswa: Int = checkNotNull(savedStateHandle[DestinasiDetailSiswa.itemIdArg])
 
     val uiDetailState: StateFlow<DetailSiswaUiState> =
-        repositoriSiswa.getsiswaStream(idSiswa)
+        repositoriSiswa.getSiswaStream(idSiswa)
             .filterNotNull()
             .map {
                 DetailSiswaUiState(detailSiswa = it.toDetailSiswa())
